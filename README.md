@@ -14,3 +14,12 @@ npx mrm lint-staged
 yarn add eslint-config-prettier -D
 
 
+
+##　commitlint
+yarn add @commitlint/config-conventional @commitlint/cli -D
+
+
+
+echo "module.exports = {extends: ['@commitlint/config-conventional']}" > commitlint.config.js
+
+npx husky add .husky/commit-msg "yarn commitlint --edit $"
